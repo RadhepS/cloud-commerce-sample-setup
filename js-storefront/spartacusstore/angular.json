@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "spartacusstore": {
+    "ssr": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/spartacusstore",
+            "outputPath": "dist/ssr",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -49,7 +49,11 @@
               "src/styles/spartacus/checkout.scss",
               "src/styles/spartacus/storefinder.scss",
               "src/styles/spartacus/asm.scss",
-              "src/styles/spartacus/product.scss"
+              "src/styles/spartacus/product.scss",
+              "src/styles/spartacus/qualtrics-embedded-feedback.scss",
+              "src/styles/spartacus/customer-ticketing.scss",
+              "src/styles/spartacus/pickup-in-store.scss",
+              "src/styles/spartacus/product-configurator.scss"
             ],
             "scripts": [],
             "stylePreprocessorOptions": {
@@ -95,10 +99,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "spartacusstore:build:production,noSsr"
+              "buildTarget": "ssr:build:production,noSsr"
             },
             "development": {
-              "buildTarget": "spartacusstore:build:development,noSsr"
+              "buildTarget": "ssr:build:development,noSsr"
             }
           },
           "defaultConfiguration": "development"
@@ -106,7 +110,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "spartacusstore:build"
+            "buildTarget": "ssr:build"
           }
         },
         "test": {
@@ -135,7 +139,11 @@
               "src/styles/spartacus/checkout.scss",
               "src/styles/spartacus/storefinder.scss",
               "src/styles/spartacus/asm.scss",
-              "src/styles/spartacus/product.scss"
+              "src/styles/spartacus/product.scss",
+              "src/styles/spartacus/qualtrics-embedded-feedback.scss",
+              "src/styles/spartacus/customer-ticketing.scss",
+              "src/styles/spartacus/pickup-in-store.scss",
+              "src/styles/spartacus/product-configurator.scss"
             ],
             "scripts": [],
             "stylePreprocessorOptions": {
